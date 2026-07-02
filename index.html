@@ -67,7 +67,7 @@
   .hero-slideshow{position:absolute; inset:0; z-index:0;}
   .hero-slide{
     position:absolute; inset:0;
-    background-size:cover; background-position:50% 25%;
+    background-size:cover; background-position:50% 58%;
     filter:saturate(1.05);
     opacity:0;
     animation:heroFade 20s infinite;
@@ -234,10 +234,11 @@
   @media(max-width:560px){.grid-work{grid-template-columns:1fr;}}
   .card{
     position:relative; aspect-ratio:4/5; overflow:hidden; background:var(--asphalt-2);
-    cursor:pointer;
+    cursor:pointer; display:block; color:inherit; text-decoration:none;
   }
   .card .thumb{position:absolute; inset:0; transition:transform .5s ease;}
   .card:hover .thumb{transform:scale(1.06);}
+  .thumb-video{width:100%; height:100%; object-fit:cover;}
   .thumb.t1{background:linear-gradient(160deg,#2a1608,#101115 55%), radial-gradient(circle at 75% 20%, rgba(255,178,56,.35), transparent 55%);}
   .thumb.t2{background:linear-gradient(160deg,#26080c,#101115 55%), radial-gradient(circle at 25% 80%, rgba(230,57,74,.32), transparent 55%);}
   .thumb.t3{background:linear-gradient(160deg,#0e1522,#101115 55%), radial-gradient(circle at 80% 75%, rgba(120,170,255,.22), transparent 55%);}
@@ -273,8 +274,12 @@
     display:flex; justify-content:space-between; align-items:center; padding:20px 0;
     border-bottom:1px solid #232429; font-size:16px; color:var(--paper);
   }
-  .clink .l{color:var(--chrome-dim); font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase;}
+  .clink .l{color:var(--chrome-dim); font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; flex-shrink:0;}
   .clink:hover .r{color:var(--amber);}
+  .insta-r{margin-left:16px; text-align:right;}
+  .insta-r a{color:inherit; text-decoration:none;}
+  .insta-r a:hover{color:var(--amber);}
+  @media(max-width:480px){.clink{font-size:13px;} .insta-r{margin-left:8px;}}
   .info-block{font-family:var(--mono); font-size:12px; color:var(--chrome-dim); line-height:1.9;}
   .info-block .row{display:flex; justify-content:space-between; border-bottom:1px dashed #232429; padding:10px 0;}
   .info-block .row span:last-child{color:var(--chrome);}
@@ -437,7 +442,7 @@
     </div>
     <div class="grid-work">
       <div class="card"><div class="thumb t1"></div><div class="play"></div><div class="info"><div class="cat">Reel · Viral</div><div class="ttl">Night Highway Run</div></div></div>
-      <div class="card"><div class="thumb t2"></div><div class="play"></div><div class="info"><div class="cat">Brand Film</div><div class="ttl">Luxury Sleeper Coach</div></div></div>
+      <a class="card" href="https://www.instagram.com/reel/DQA5opREwZY/" target="_blank" rel="noopener"><video class="thumb thumb-video" src="assets/video/luxury-sleeper-coach.mp4" autoplay muted loop playsinline></video><div class="play"></div><div class="info"><div class="cat">Brand Film</div><div class="ttl">Luxury Sleeper Coach</div></div></a>
       <div class="card"><div class="thumb t3"></div><div class="play"></div><div class="info"><div class="cat">Photography</div><div class="ttl">Fleet Launch Shoot</div></div></div>
       <div class="card"><div class="thumb t4"></div><div class="play"></div><div class="info"><div class="cat">Reel</div><div class="ttl">Golden Hour Convoy</div></div></div>
       <div class="card"><div class="thumb t5"></div><div class="play"></div><div class="info"><div class="cat">Commercial</div><div class="ttl">Fleet Operator Story</div></div></div>
@@ -455,10 +460,12 @@
     <p class="lead">Whether it's a bus launch, a fleet campaign, or a brand film — I'm open to collaborations with automotive brands, operators, and creators.</p>
     <div class="contact-grid">
       <div class="contact-links">
-        <a class="clink" href="mailto:youremail@example.com"><span class="l">Email</span><span class="r">youremail@example.com</span></a>
-        <a class="clink" href="#"><span class="l">Instagram</span><span class="r">@yourhandle</span></a>
-        <a class="clink" href="#"><span class="l">YouTube</span><span class="r">/yourchannel</span></a>
-        <a class="clink" href="#"><span class="l">WhatsApp</span><span class="r">+91 XXXXX XXXXX</span></a>
+        <a class="clink" href="mailto:shainithsuvarna97@gmail.com"><span class="l">Email</span><span class="r">shainithsuvarna97@gmail.com</span></a>
+        <div class="clink">
+          <span class="l">Instagram</span>
+          <span class="r insta-r"><a href="https://instagram.com/shainith.autoframes" target="_blank" rel="noopener">@shainith.autoframes</a> / <a href="https://instagram.com/_.tulunada_buses._" target="_blank" rel="noopener">@_.tulunada_buses._</a></span>
+        </div>
+        <a class="clink" href="https://wa.me/919148017667" target="_blank" rel="noopener"><span class="l">WhatsApp</span><span class="r">+91 91480 17667</span></a>
       </div>
       <div class="info-block">
         <div class="row"><span>Based In</span><span>Karnataka, India</span></div>
